@@ -54,21 +54,43 @@ public class PaySlip_DelRosario {
     return grossIncome;
   }
 
-  public double getWithholdingTax() {
+  // public double getWithholdingTax() {
+  //   if (grossIncome < 20000) {
+  //     withholdingTax = grossIncome * 0;
+  //   } else if (grossIncome > 20000 && grossIncome < 31000) {
+  //     withholdingTax = ((grossIncome - 20000) * 0.2);
+  //   } else if (grossIncome > 31000 && grossIncome < 61000) {
+  //     withholdingTax = ((grossIncome - 31000) * 0.25) + 2300;
+  //   } else if (grossIncome > 61000 && grossIncome < 154000) {
+  //     withholdingTax = ((grossIncome - 61000) * 0.3) + 10000;
+  //   } else if (grossIncome > 154000 && grossIncome < 615000) {
+  //     withholdingTax = ((grossIncome - 154000) * 0.32) + 38000;
+  //   } else if (grossIncome > 615000) {
+  //     withholdingTax = ((grossIncome - 615000) * 0.35) + 185000;
+  //   }
+  //   return withholdingTax;
+  // }
+
+  // Replacement for the prior function
+  public double getWithholdingTax(double grossIncome) {
     if (grossIncome < 20000) {
-      withholdingTax = grossIncome * 0;
-    } else if (grossIncome > 20000 && grossIncome < 31000) {
-      withholdingTax = ((grossIncome - 20000) * 0.2);
-    } else if (grossIncome > 31000 && grossIncome < 61000) {
-      withholdingTax = ((grossIncome - 31000) * 0.25) + 2300;
-    } else if (grossIncome > 61000 && grossIncome < 154000) {
-      withholdingTax = ((grossIncome - 61000) * 0.3) + 10000;
-    } else if (grossIncome > 154000 && grossIncome < 615000) {
-      withholdingTax = ((grossIncome - 154000) * 0.32) + 38000;
-    } else if (grossIncome > 615000) {
-      withholdingTax = ((grossIncome - 615000) * 0.35) + 185000;
-    }
-    return withholdingTax;
+      return grossIncome * 0;
+    }  
+    if (grossIncome > 20000 && grossIncome < 31000) {
+      return ((grossIncome - 20000) * 0.2);
+    }  
+    if (grossIncome > 31000 && grossIncome < 61000) {
+      return ((grossIncome - 31000) * 0.25) + 2300;
+    }  
+    if (grossIncome > 61000 && grossIncome < 154000) {
+      return ((grossIncome - 61000) * 0.3) + 10000;
+    }  
+    if (grossIncome > 154000 && grossIncome < 615000) {
+      return ((grossIncome - 154000) * 0.32) + 38000;
+    }  
+
+    return ((grossIncome - 615000) * 0.35) + 185000;
+
   }
 
   public double getSssDeduction() {
