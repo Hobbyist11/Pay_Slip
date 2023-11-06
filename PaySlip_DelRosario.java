@@ -85,7 +85,7 @@ public class PaySlip_DelRosario {
     return pagIbigDeduction;
   }
 
-  public double getPhilheatlDeduction() {
+  public double getPhilheatlDeduction() {I got incredibly confused by our ac
     philHealthDeduction = basicSalary * 0.35;
     if (philHealthDeduction > 2450) {
       philHealthDeduction = 2450;
