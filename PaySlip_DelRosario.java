@@ -54,7 +54,6 @@ public class PaySlip_DelRosario {
     return grossIncome;
   }
 
-  // computes the withholdingTax
   public double getWithholdingTax(double grossIncome) {
     if (grossIncome < 20000) {
       return grossIncome * 0;
@@ -99,7 +98,6 @@ public class PaySlip_DelRosario {
     return netPay;
   }
 
-  // Access info for output
   public void getOutput() {
     System.out.println("");
     System.out.println("*********************");
